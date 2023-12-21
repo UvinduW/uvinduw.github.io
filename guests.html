@@ -1,0 +1,1089 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('/css/searchicon.png');
+  background-position: 10px 10px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd;
+  margin-bottom: 12px;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}
+</style>
+</head>
+<body>
+
+<h2>Wedding Guest Search</h2>
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:60%;">Name</th>
+    <th style="width:40%;">Table</th>
+	<th style="width:40%;">Photo Number</th>
+  </tr>
+
+
+
+  <tr>
+    <td>Sugala Wijesinghe</td>
+    <td>1</td>
+	<td>2</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Senake Wijesinghe</td>
+    <td>2</td>
+	<td>4</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Uvindu Jayanake Wijesinghe</td>
+    <td>3</td>
+	<td>6</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Mis. Jithya Wijesinghe</td>
+    <td>4</td>
+	<td>8</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Dhammika Wijesinghe</td>
+    <td>5</td>
+	<td>10</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Nirosha Wijesinghe</td>
+    <td>6</td>
+	<td>12</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Sandaru Wijesinghe</td>
+    <td>7</td>
+	<td>14</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Ranjith Bandara</td>
+    <td>8</td>
+	<td>16</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Dhananjaya Bandara</td>
+    <td>9</td>
+	<td>18</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Kanishka Bandara</td>
+    <td>10</td>
+	<td>20</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Lloyd Jayasundara</td>
+    <td>11</td>
+	<td>22</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Vikum Jayasundara & Family</td>
+    <td>12</td>
+	<td>24</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Kelum Kasthuriarachchi & Family</td>
+    <td>13</td>
+	<td>26</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Kelum Kasthuriarachchi Duwa</td>
+    <td>14</td>
+	<td>28</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Chaminda Kasthuriarachchi & family</td>
+    <td>15</td>
+	<td>30</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Dhammika Abeyawardene</td>
+    <td>16</td>
+	<td>32</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Pahanga Abeyawardene</td>
+    <td>17</td>
+	<td>34</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Lisitha Abeyawardene</td>
+    <td>18</td>
+	<td>36</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Ranjan Wijegunawardene</td>
+    <td>19</td>
+	<td>38</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Thiwanka Senevirathne</td>
+    <td>20</td>
+	<td>40</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Jinadarie Nandasinghe</td>
+    <td>21</td>
+	<td>42</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Ranjani Nenda and Piyadasa Mama</td>
+    <td>22</td>
+	<td>44</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Kosala Liyanagedara</td>
+    <td>23</td>
+	<td>46</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Vishwa Nandasinghe</td>
+    <td>24</td>
+	<td>48</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Sanjeewa Wijesinghe</td>
+    <td>25</td>
+	<td>50</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Lalitha Wijesinghe</td>
+    <td>26</td>
+	<td>52</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Dinnaga Padmaperuma</td>
+    <td>27</td>
+	<td>54</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Gihan Buthgamuwa</td>
+    <td>28</td>
+	<td>56</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Kumudu Liyanage</td>
+    <td>29</td>
+	<td>58</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Channa Liyanage</td>
+    <td>30</td>
+	<td>60</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Wasantha Wijegunawardene</td>
+    <td>31</td>
+	<td>62</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Sharika Wijegunawardene</td>
+    <td>32</td>
+	<td>64</td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Shanthilal  Jayasinghe</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Ranil Wijegunawardane</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Neomal Wijegunawardana</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Manel Illapperuma</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Kapila Perera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Nelum Perera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Anura Perera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Saliya De Silva</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Lalith Wanigasuriya</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Kumari Abeyweera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Lakshaman Athukorala</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Sudath Mahaadivulwewa</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Sampath Amaratunge</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Prasantha Abeykoon</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Rizvi Jurangpathy</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Kaveesha Perera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Nevinda Jayasooriya</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Shironi Bulathsinhala</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Nandhika Buddhipala</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Ruwan Attanayake</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Ajith Siriwardene</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Rohitha Ranepura</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Ravi Liyanage</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Mahendra Jayasekera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Jagath Jayathilaka</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Roschen Perera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Indrajith Fernando</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Priyanka Jayathilake</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Suren Rajakarier</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Jagath Perera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Udayantha Kariyawasam</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Buddhapriya Ramanayake</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Prasanna Dahathunarachchi</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Susantha Balapatabendi</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Krishantha Kariyawasam</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Jagath Premaratne</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Jayantha Rathnayake</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Rohitha Perera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Shamanthi Bulathsinhala</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Pulina Bulathsinhala</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Priyantha Kurukulasooriya</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Sunil Perera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Saman Perera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Buddhika Payoe</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Nihal de Silva</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Mr.Lincoln Piyasena</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Mr.Lasantha Wickremasinghe</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Thusitha de Silva</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Sheron de Silva</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Chintha Perera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Somaratne Vidana Pathirana</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Saman Waduge</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Jagath Dias</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Saman Ratnayake</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Sanjaya Ravindra</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Uditha Bombuwala</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Lalith Senaratne & Family</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Miss. Sanjika Senaratne Duwa</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Patrick Wanda</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Mrs.Ramya Blair</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Nisali Friends</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Nisali Friends</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Hemasiri Perera</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Dr Deen</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Nilusha</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Mr.& Wilson Fernando</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>MR.Dilan Fernando</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Ms.Tilini Gunathilake</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Nisali Lecturers</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Victor Raj</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Premasiri</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Matthew Thomas Walker</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Sophie Louise Culling</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>William Thomas Taylor</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Loni Anne Nelson</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Oliver William Dumigan Wilkins</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Kieran James Shopland</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Benjamin Mark Carretta</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Samuel James Gray</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Natalie Kyprianou</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Peter John Walker</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Chung Kim Tang (Andy)</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Weitong Gou</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Alvin Kurien Kuruvilla</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Arifa Sidat</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Safiyah Khan</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Rohit Banerjee</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Ben Warwick-Champion</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Freya Lenton</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Oliver Holt</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Aurora Widawati</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>George Balkwill</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td>Sophia Perrone</td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+
+
+  <tr>
+    <td></td>
+    <td></td>
+	<td></td>
+  </tr>
+  
+</table>
+
+<script>
+function myFunction() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+
+</body>
+</html>
+
