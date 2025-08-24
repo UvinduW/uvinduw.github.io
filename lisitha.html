@@ -53,9 +53,9 @@
                     id="tables" width="100%" height="100%" style="border: none"></object>
                       </details>
                     </div>						
-                    <p class="mb-4">Search for guests and their table and photo numbers.</p>
+                    <p class="mb-4">Search for guests and their table numbers.</p>
 					<div class="col-sm-6 mb-3 mb-sm-0">
-						<input type="text" class="form-control form-control-user" id="myInput" onkeyup="myFunction()"
+						<input type="text" class="form-control form-control-user" id="myInput" onkeyup="filterName()"
 							placeholder="Search for names...">
 					</div>	
 					<br>					
@@ -286,7 +286,7 @@
 										  </tr>
   
 										  <tr>
-											<td>Miss Hasini Fernando</td>
+											<td>Hasini Fernando</td>
 											<td onclick="setTableGreen(3)" href="#"><a href="#">3</a></td>
 										  </tr>
   
@@ -321,7 +321,7 @@
 										  </tr>
   
 										  <tr>
-											<td>Mrs .Shanthi Gunasena</td>
+											<td>Shanthi Gunasena</td>
 											<td onclick="setTableGreen(20)" href="#"><a href="#">20</a></td>
 										  </tr>
   
@@ -1068,49 +1068,42 @@ function getTableById(elementId) {
 }
 
 async function setTableGreen(tableID){
+  // Open the details element
   document.getElementById("table_detail").setAttribute("open", "true");
+  // Scroll to top of page
   window.scrollTo({ top: 0, behavior: 'smooth' });
-  await new Promise(r => setTimeout(r, 100));
+  // Wait 200ms for the SVG to load so that svgDoc is ready
+  await new Promise(r => setTimeout(r, 200));
+
+  // Reset all table elements to have the normal properties
 	for (let i = 1; i < 34; i++) {
 		table_el = getTableById("cell-table"+i)
 		table_el.setAttribute("fill","transparent")
+		table_el.setAttribute("style","stroke: rgb(215,155,0)")
+		table_el.setAttribute("stroke-width","7")
 	}
+	
+	// Highlight the current table with different fill, border, and border size
 	table_el = getTableById("cell-table"+tableID)
-	table_el.setAttribute("fill","green")
+	table_el.setAttribute("fill","navy")
+	table_el.setAttribute("style","stroke: #0AF5A3")
+	table_el.setAttribute("stroke-width","15")
 }
 
-// Usage example
+// Get the object ID for the SVG
 const obj = document.getElementById("tables");
 
+// Setup svgDoc variable when object loads to make SVG accessible
 obj.addEventListener("load", () => {
     svgDoc = obj.contentDocument;
     if (!svgDoc) {
         console.error("SVG not accessible — check same-origin or file path");
         return;
     }
-
-    const allWithId = svgDoc.querySelectorAll("[id]");
-    const ids = Array.from(allWithId).map(el => el.id);
-
-    console.log("IDs in SVG:", ids);
-	element = svgDoc.getElementById("cell-table1");
-	
-	const svg = svgDoc.querySelector("svg");
-
-  if (svg) {
-    // Remove hardcoded width/height
-    //svg.removeAttribute("width");
-    //svg.removeAttribute("height");
-
-    // (Optional) Force the viewBox to be the true bounding box
-    // This uses getBBox on all elements
-    //const bbox = svg.getBBox();
-    //const newViewBox = `0 0 ${bbox.width} ${bbox.height}`;
-    //svg.setAttribute("viewBox", newViewBox);
-  }
 });
 
-function myFunction() {
+// A function to filter the name-table_number table based on the name provided
+function filterName() {
   var input, filter, table, tr, td, i, txtValue;
   input = document.getElementById("myInput");
   filter = input.value.toUpperCase();
