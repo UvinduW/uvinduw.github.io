@@ -1077,10 +1077,14 @@ async function setTableGreen(tableID){
 
   // Reset all table elements to have the normal properties
 	for (let i = 1; i < 34; i++) {
-		table_el = getTableById("cell-table"+i)
-		table_el.setAttribute("fill","transparent")
-		table_el.setAttribute("style","stroke: rgb(215,155,0)")
-		table_el.setAttribute("stroke-width","7")
+        // We've removed table 5 in this layout
+        if (i != 5)
+		{
+            table_el = getTableById("cell-table"+i)
+            table_el.setAttribute("fill","transparent")
+            table_el.setAttribute("style","stroke: rgb(215,155,0)")
+            table_el.setAttribute("stroke-width","7")
+		}
 	}
 	
 	// Highlight the current table with different fill, border, and border size
